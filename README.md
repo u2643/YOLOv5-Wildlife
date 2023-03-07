@@ -1,2 +1,1 @@
-# 红外图像动物物种识别
-YOLO v5
+# Red panda
