@@ -25,7 +25,7 @@
 
 * 根据图像特点分为昼间图像（RGB图像）和夜间图像（红外图像），划分出昼间数据集、夜间数据集以及混合数据集进行训练
 
-* 基于早期YOLOv5框架，引入注意力机制增强模型特征提取能力，并进行消融实验探究作用
+* 基于早期YOLOv5框架，引入注意力机制增强模型特征提取能力，通过消融实验验证其作用
 
   |  评价标准  | 昼间  | 夜间  | 混合  |
   | :--------: | :---: | :---: | :---: |
@@ -34,9 +34,12 @@
 
 ## 3.可视化展示
 
-![检测图片](G:\u2643\chris\我的\本科毕设\毕业设计-PC\图表\检测图片.png)
+![detect](./img/detect.png)
 
 ## 4.PyQt5用户界面
 
 * 此部分代码主要参考[Javacr](https://github.com/Javacr)/[PyQt5-YOLOv5](https://github.com/Javacr/PyQt5-YOLOv5)的项目实现，在此特别感谢
-* 
+* 可视化展示如下：
+  ![view](./img/view.png)
+  ![detect1](./img/detect_panda.png)
+  ![detect2](./img/detect_redpanda.png)
