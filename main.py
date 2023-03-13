@@ -187,9 +187,10 @@ class DetThread(QThread):
                     self.send_img.emit(im0)
                     self.send_statistic.emit(statistic_dic)
                     if self.save_fold and self.write:
-                        os.makedirs(self.save_fold, exist_ok=True)
+                        fold_path = self.save_fold + '/' + names[c]
+                        os.makedirs(fold_path, exist_ok=True)
                         if self.vid_cap is None:
-                            save_path = os.path.join(self.save_fold,
+                            save_path = os.path.join(fold_path,
                                                      time.strftime('%Y_%m_%d_%H_%M_%S',
                                                                    time.localtime()) + '.jpg')
                             cv2.imwrite(save_path, im0)
@@ -202,7 +203,7 @@ class DetThread(QThread):
                                 # width = int(self.vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
                                 # height = int(self.vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
                                 width, height = im0.shape[1], im0.shape[0]
-                                save_path = os.path.join(self.save_fold, time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime()) + '.mp4')
+                                save_path = os.path.join(fold_path, time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime()) + '.mp4')
                                 self.out = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*"mp4v"), ori_fps,
                                                            (width, height))
                             self.out.write(im0)
