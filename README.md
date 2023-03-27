@@ -6,7 +6,7 @@
 
   | **物种**                         | **数量** |
   | -------------------------------- | -------- |
-  | Asian_black_bear[亚洲黑熊        | 185      |
+  | Asian_black_bear[亚洲黑熊]        | 185      |
   | Bos_taurus[家牛]                 | 563      |
   | Capra_aegagrus_hircus[家羊]      | 254      |
   | Ailurus_fulgens[小熊猫]          | 270      |
